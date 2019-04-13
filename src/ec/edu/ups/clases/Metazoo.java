@@ -11,13 +11,13 @@ import ec.edu.ups.interfaz.Interface;
  *
  * @author tians
  */
-public class Metazoos extends Invertebrado implements Interface{
+public class Metazoo extends Invertebrado implements Interface{
     private boolean cuerpoBlando;
     private String simetria;
     private String piel;
     private boolean antenas;
 
-    public Metazoos(boolean cuerpoBlando, String simetria, String piel, boolean antenas, boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso, String nombre, int edad, int peso, String tipoAlimentacion) {
+    public Metazoo(boolean cuerpoBlando, String simetria, String piel, boolean antenas, boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(proteccionCorporal, excepcion, movilidad, venenoso, nombre, edad, peso, tipoAlimentacion);
         this.cuerpoBlando = cuerpoBlando;
         this.simetria = simetria;
@@ -59,7 +59,9 @@ public class Metazoos extends Invertebrado implements Interface{
 
     @Override
     public String toString() {
-        return "Metazoos{" + "cuerpoBlando=" + cuerpoBlando + ", simetria=" + simetria + ", piel=" + piel + ", antenas=" + antenas + '}';
+        return "Metazoo: " +"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()
+                +"\n\tProteccion Corporal: "+super.isProteccionCorporal()+"\n\tExcepcion: "+super.isExcepcion()+"\n\tMovilidad: "+super.isMovilidad()+"\n\tVenenoso: "+super.isVenenoso()
+                + "\n\tCuerpo Blando: " + cuerpoBlando + "\n\tSimetria: " + simetria + "\n\tPiel: " + piel + "\n\tAntenas: " + antenas ;
     }
 
     public void arrastrarse () {
@@ -76,12 +78,14 @@ public class Metazoos extends Invertebrado implements Interface{
 
     @Override
     public void comer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("El Metazoo de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" esta comiendo");
     }
 
     @Override
     public void dormir() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("El Metazoo de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" esta comiendo");
     }
     
 }

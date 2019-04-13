@@ -59,7 +59,9 @@ public class Artropodo extends Invertebrado implements Interface {
 
     @Override
     public String toString() {
-        return "Artropodo{" + "forma=" + forma + ", apendice=" + apendice + ", cabeza=" + cabeza + ", poro=" + poro + '}';
+        return "Artropodo: " +"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()
+                +"\n\tProteccion Corporal: "+super.isProteccionCorporal()+"\n\tExcepcion: "+super.isExcepcion()+"\n\tMovilidad: "+super.isMovilidad()+"\n\tVeneso"+super.isVenenoso()
+                + "\n\tForma: " + forma + "\n\tApendice: " + apendice + "\n\tCabeza: " + cabeza + "\n\tPoro: " + poro;
     }
     
     public void picar () {
@@ -76,13 +78,15 @@ public class Artropodo extends Invertebrado implements Interface {
 
     @Override
     public void comer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("El Artropodo de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" esta comiendo");
     }
 
 
     @Override
     public void dormir() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("El Artropodo de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" esta durmiendo");
     }
     
 }
