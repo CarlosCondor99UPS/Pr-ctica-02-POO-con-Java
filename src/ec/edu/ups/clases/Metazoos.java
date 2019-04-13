@@ -5,11 +5,13 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.interfaz.Interface;
+
 /**
  *
  * @author tians
  */
-public class Metazoos extends Invertebrado{
+public class Metazoos extends Invertebrado implements Interface{
     private boolean cuerpoBlando;
     private String simetria;
     private String piel;
@@ -60,7 +62,26 @@ public class Metazoos extends Invertebrado{
         return "Metazoos{" + "cuerpoBlando=" + cuerpoBlando + ", simetria=" + simetria + ", piel=" + piel + ", antenas=" + antenas + '}';
     }
 
+    public void arrastrarse () {
+        
+    }
     
+    public void descomponer () {
+        
+    }
     
+    public void rastrear () {
+        
+    }
+
+    @Override
+    public void comer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void dormir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

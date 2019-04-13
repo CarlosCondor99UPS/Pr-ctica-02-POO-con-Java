@@ -5,11 +5,13 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.interfaz.Interface;
+
 /**
  *
  * @author tians
  */
-public class Artropodo extends Invertebrado {
+public class Artropodo extends Invertebrado implements Interface {
     private String forma;
     private boolean apendice;
     private boolean cabeza;
@@ -60,5 +62,27 @@ public class Artropodo extends Invertebrado {
         return "Artropodo{" + "forma=" + forma + ", apendice=" + apendice + ", cabeza=" + cabeza + ", poro=" + poro + '}';
     }
     
+    public void picar () {
+        
+    }
+    
+    public void trepar () {
+        
+    }
+    
+    public void atacar () {
+        
+    }
+
+    @Override
+    public void comer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+    @Override
+    public void dormir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

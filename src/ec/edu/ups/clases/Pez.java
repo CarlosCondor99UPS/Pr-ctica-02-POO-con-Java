@@ -5,11 +5,13 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.interfaz.Interface;
+
 /**
  *
  * @author tians
  */
-public class Pez extends Vertebrado {
+public class Pez extends Vertebrado implements Interface{
     private String agua;
     private boolean aleta;
     private boolean mandibula;
@@ -59,8 +61,34 @@ public class Pez extends Vertebrado {
 
     @Override
     public String toString() {
-        return "Pez{" + "agua=" + agua + ", aleta=" + aleta + ", mandibula=" + mandibula + ", camuflaje=" + camuflaje + '}';
+        return "Pez:"+ "\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()
+               + "\n\tEsqueleto: "+super.getEsqueleto() +"\n\tSangre: "+super.getSangre() +"\n\tTejido: "+super.getTejido()+"\n\tHuesos: "+super.getNumeroHuesos()
+                + "\n\tAgua: " + agua + "\n\tAleta: " + aleta + "\n\tMandibula: " + mandibula + "\n\tCamuflaje: " + camuflaje;
     }
     
+    public void ponerHuevos () {
+        
+    }
+    
+    public void nadar () {
+        
+    }
+    
+    public void camuflarse () {
+        
+    }
+
+    @Override
+    public void comer() {
+        System.out.println("El pez de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" esta comiendo");
+    }
+
+
+    @Override
+    public void dormir() {
+        System.out.println("El ave de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" esta dormir");
+    }
     
 }
