@@ -9,7 +9,7 @@ package ec.edu.ups.clases;
  *
  * @author tians
  */
-public class Invertebrado extends Animal{
+public abstract class  Invertebrado extends Animal{
     private boolean proteccionCorporal;
     private boolean excepcion;
     private boolean movilidad;
@@ -60,6 +60,7 @@ public class Invertebrado extends Animal{
         return "Invertebrado{" + "proteccionCorporal=" + proteccionCorporal + ", excepcion=" + excepcion + ", movilidad=" + movilidad + ", venenoso=" + venenoso + '}';
     }
     
+    public abstract void multiplicarCelulas();
     
     
 }

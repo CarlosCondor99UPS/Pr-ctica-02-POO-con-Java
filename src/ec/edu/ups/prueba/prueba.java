@@ -21,19 +21,19 @@ public class prueba {
         
          
         ArrayList<Animal> lista=new ArrayList<>();
-        Ave condor=new Ave(4, true, "Curvado", 80, 35, "Interno", "Caliente",
+        Ave anonimo=new Ave(4, true, "Curvado", 80, 35, "Interno", "Caliente",
                             "Vertebras", "Condor", 5, 80, "Carnivoro");
-        Pez espada=new Pez("Salada", true, true, false, 150, "Interno", "Fria", "Vertebrados y cartilagos",
+        Pez anonimo2=new Pez("Salada", true, true, false, 150, "Interno", "Fria", "Vertebrados y cartilagos",
                             "Pez espada", 5, 250, "Carnivoro");
-        Metazoo gusano=new Metazoo(true, "Bilateral", "Mojada con anillos", false, false, false, true, false,
+        Metazoo anonimo3=new Metazoo(true, "Bilateral", "Mojada con anillos", false, false, false, true, false,
                             "Guasno de Agua", 1, 3, "Carniboros");
-        Artropodo cangrejo=new Artropodo("Crustaceo", true, true, false, true, true, true, false, "Cangrejo",
+        Artropodo anonimo4=new Artropodo("Crustaceo", true, true, false, true, true, true, false, "Cangrejo",
                             2, 35, "Omniviparos");
         
-        lista.add(condor);
-        lista.add(espada);
-        lista.add(gusano);
-        lista.add(cangrejo);
+        lista.add(anonimo);
+        lista.add(anonimo2);
+        lista.add(anonimo3);
+        lista.add(anonimo4);
         
         for (Animal animal : lista) {
             if(animal instanceof Ave){
@@ -49,8 +49,9 @@ public class prueba {
                 Metazoo temp = (Metazoo) animal;
                 System.out.println(temp);
             }
-            
         }
+        
+        
         
         
     }

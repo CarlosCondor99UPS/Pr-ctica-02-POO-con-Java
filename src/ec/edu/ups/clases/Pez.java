@@ -61,9 +61,9 @@ public class Pez extends Vertebrado implements Interface{
 
     @Override
     public String toString() {
-        return "Pez:"+ "\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()
-               + "\n\tEsqueleto: "+super.getEsqueleto() +"\n\tSangre: "+super.getSangre() +"\n\tTejido: "+super.getTejido()+"\n\tHuesos: "+super.getNumeroHuesos()
-                + "\n\tAgua: " + agua + "\n\tAleta: " + aleta + "\n\tMandibula: " + mandibula + "\n\tCamuflaje: " + camuflaje;
+        return "Animal: "+"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()+"\n"
+               +"\tVertebrado: "+"\n\t\t\tEsqueleto: "+super.getEsqueleto() +"\n\t\t\tSangre: "+super.getSangre() +"\n\t\t\tTejido: "+super.getTejido()+"\n\t\t\tHuesos: "+super.getNumeroHuesos()+"\n"
+               +"\t\tPez:"+ "\n\t\t\tAgua: " + agua + "\n\t\t\tAleta: " + aleta + "\n\t\t\tMandibula: " + mandibula + "\n\t\t\tcamuflaje: " + camuflaje +"\n";
     }
     
     public void ponerHuevos () {
@@ -87,8 +87,14 @@ public class Pez extends Vertebrado implements Interface{
 
     @Override
     public void dormir() {
-        System.out.println("El ave de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
-                +" esta dormir");
+        System.out.println("El pez de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" esta durmiendo");
+    }
+
+    @Override
+    public void crecerColumnaVertebral() {
+        System.out.println("El pez de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" le crece la columna vertebral");
     }
     
 }

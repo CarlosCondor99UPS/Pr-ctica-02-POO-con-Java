@@ -59,9 +59,9 @@ public class Artropodo extends Invertebrado implements Interface {
 
     @Override
     public String toString() {
-        return "Artropodo: " +"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()
-                +"\n\tProteccion Corporal: "+super.isProteccionCorporal()+"\n\tExcepcion: "+super.isExcepcion()+"\n\tMovilidad: "+super.isMovilidad()+"\n\tVeneso"+super.isVenenoso()
-                + "\n\tForma: " + forma + "\n\tApendice: " + apendice + "\n\tCabeza: " + cabeza + "\n\tPoro: " + poro;
+        return "Animal: "+"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()+"\n"
+               +"\tInvertebrado: "+"\n\t\t\tExcepcion: "+super.isExcepcion() +"\n\t\t\tMovilidad: "+super.isMovilidad() +"\n\t\t\tProteccion Corporal: "+super.isProteccionCorporal()+"\n\t\t\tVenenoso: "+super.isVenenoso()+"\n"
+               +"\t\t:Artropodo"+ "\n\t\t\tForma: " + forma + "\n\t\t\tApendice: " + apendice + "\n\t\t\tCabeza: " + cabeza + "\n\t\t\tPoros: " + poro +"\n";
     }
     
     public void picar () {
@@ -87,6 +87,12 @@ public class Artropodo extends Invertebrado implements Interface {
     public void dormir() {
         System.out.println("El Artropodo de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
                 +" esta durmiendo");
+    }
+
+    @Override
+    public void multiplicarCelulas() {
+        System.out.println("El Artropodo de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" esta multiplicando sus celulas");
     }
     
 }

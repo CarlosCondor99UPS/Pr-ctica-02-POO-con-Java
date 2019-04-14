@@ -59,9 +59,9 @@ public class Metazoo extends Invertebrado implements Interface{
 
     @Override
     public String toString() {
-        return "Metazoo: " +"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()
-                +"\n\tProteccion Corporal: "+super.isProteccionCorporal()+"\n\tExcepcion: "+super.isExcepcion()+"\n\tMovilidad: "+super.isMovilidad()+"\n\tVenenoso: "+super.isVenenoso()
-                + "\n\tCuerpo Blando: " + cuerpoBlando + "\n\tSimetria: " + simetria + "\n\tPiel: " + piel + "\n\tAntenas: " + antenas ;
+        return  "Animal: "+"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()+"\n"
+               +"\tInvertebrado: "+"\n\t\t\tExcepcion: "+super.isExcepcion() +"\n\t\t\tMovilidad: "+super.isMovilidad() +"\n\t\t\tProteccion Corporal: "+super.isProteccionCorporal()+"\n\t\t\tVenenoso: "+super.isVenenoso()+"\n"
+               +"\t\t:Metazoo"+ "\n\t\t\tCuerpo Blando: " + cuerpoBlando + "\n\t\t\tSimetrai: " + simetria + "\n\t\t\tPiel: " + piel + "\n\t\t\tAntenas: " +antenas +"\n";
     }
 
     public void arrastrarse () {
@@ -86,6 +86,12 @@ public class Metazoo extends Invertebrado implements Interface{
     public void dormir() {
         System.out.println("El Metazoo de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
                 +" esta comiendo");
+    }
+
+    @Override
+    public void multiplicarCelulas() {
+        System.out.println("El Metazoo de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" esta multiplicando sus celulas");
     }
     
 }

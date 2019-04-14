@@ -9,7 +9,7 @@ package ec.edu.ups.clases;
  *
  * @author tians
  */
-public class Vertebrado extends Animal{
+public abstract class Vertebrado extends Animal{
     public int numeroHuesos;
     public String esqueleto;
     public String sangre;
@@ -61,6 +61,6 @@ public class Vertebrado extends Animal{
         return "Vertebrado{" + "numeroHuesos=" + numeroHuesos + ", esqueleto=" + esqueleto + ", sangre=" + sangre + ", tejido=" + tejido + '}';
     }
     
-    
+    public abstract void crecerColumnaVertebral ();
     
 }

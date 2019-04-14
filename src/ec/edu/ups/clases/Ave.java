@@ -61,9 +61,9 @@ public class Ave extends Vertebrado implements Interface{
 
     @Override
     public String toString() {
-        return "Ave: "+"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()
-               + "\n\tEsqueleto: "+super.getEsqueleto() +"\n\tSangre: "+super.getSangre() +"\n\tTejido: "+super.getTejido()+"\n\tHuesos: "+super.getNumeroHuesos()
-               + "\n\tAlas: " + numeroAlas + "\n\tVolador: " + volador + "\n\tForma Pico: " + formaPico + "\n\tCampo Vision(grados): " + campoVision ;
+        return "Animal: "+"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()+"\n"
+               +"\tVertebrado: "+"\n\t\t\tEsqueleto: "+super.getEsqueleto() +"\n\t\t\tSangre: "+super.getSangre() +"\n\t\t\tTejido: "+super.getTejido()+"\n\t\t\tHuesos: "+super.getNumeroHuesos()+"\n"
+               +"\t\tAve:"+ "\n\t\t\tAlas: " + numeroAlas + "\n\t\t\tVolador: " + volador + "\n\t\t\tForma Pico: " + formaPico + "\n\t\t\tCampo Vision(grados): " + campoVision +"\n";
         
     }
 
@@ -91,5 +91,11 @@ public class Ave extends Vertebrado implements Interface{
     public void dormir() {
         System.out.println("El ave de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
                 +" esta durmiendo");
+    }
+
+    @Override
+    public void crecerColumnaVertebral() {
+        System.out.println("El ave de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
+                +" le crece la columna vertebral");
     }
 }
