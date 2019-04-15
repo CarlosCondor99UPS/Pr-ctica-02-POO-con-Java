@@ -26,13 +26,13 @@ public class Pez extends Vertebrado implements Interface {
     }
 
     //Constructor de herencia con la clase Abuelo Animal
-    public Pez(String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(nombre, edad, peso, tipoAlimentacion);
+    public Pez(int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(codigo, nombre, edad, peso, tipoAlimentacion);
     }
 
     //Constructor de herencia con la clase Padre Vertebrados y atributos de la clase Pez
-    public Pez(String agua, boolean aleta, boolean mandibula, boolean camuflaje, String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(nombre, edad, peso, tipoAlimentacion);
+    public Pez(String agua, boolean aleta, boolean mandibula, boolean camuflaje,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(codigo, nombre, edad, peso, tipoAlimentacion);
         this.agua = agua;
         this.aleta = aleta;
         this.mandibula = mandibula;
@@ -40,8 +40,8 @@ public class Pez extends Vertebrado implements Interface {
     }
 
     //Constructor de herencia con la clase Padre Invertebrados y atributos de la clase Pez
-    public Pez(String agua, boolean aleta, boolean mandibula, boolean camuflaje, int numeroHuesos, String esqueleto, String sangre, String tejido, String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(numeroHuesos, esqueleto, sangre, tejido, nombre, edad, peso, tipoAlimentacion);
+    public Pez(String agua, boolean aleta, boolean mandibula, boolean camuflaje, int numeroHuesos, String esqueleto, String sangre, String tejido,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(numeroHuesos, esqueleto, sangre, tejido, codigo ,nombre, edad, peso, tipoAlimentacion);
         this.agua = agua;
         this.aleta = aleta;
         this.mandibula = mandibula;

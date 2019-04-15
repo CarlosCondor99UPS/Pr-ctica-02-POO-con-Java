@@ -26,13 +26,13 @@ public class Ave extends Vertebrado implements Interface {
     }
 
     //Constructor de herencia con la clase Abuelo Animal
-    public Ave(int numeroHuesos, String esqueleto, String sangre, String tejido, String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(numeroHuesos, esqueleto, sangre, tejido, nombre, edad, peso, tipoAlimentacion);
+    public Ave(int numeroHuesos, String esqueleto, String sangre, String tejido,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(numeroHuesos, esqueleto, sangre, tejido,codigo ,nombre, edad, peso, tipoAlimentacion);
     }
 
     //Constructor de herencia con la clase Abuelo Animal y atributos de la clase Ave
-    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(nombre, edad, peso, tipoAlimentacion);
+    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(codigo, nombre, edad, peso, tipoAlimentacion);
         this.numeroAlas = numeroAlas;
         this.volador = volador;
         this.formaPico = formaPico;
@@ -40,8 +40,8 @@ public class Ave extends Vertebrado implements Interface {
     }
 
     //Constructor de herencia con la clase padre Vertebrados y atributos de la clase Ave
-    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, int numeroHuesos, String esqueleto, String sangre, String tejido, String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(numeroHuesos, esqueleto, sangre, tejido, nombre, edad, peso, tipoAlimentacion);
+    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, int numeroHuesos, String esqueleto,int codigo ,String sangre, String tejido, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(numeroHuesos, esqueleto, sangre, tejido,codigo ,nombre, edad, peso, tipoAlimentacion);
         this.numeroAlas = numeroAlas;
         this.volador = volador;
         this.formaPico = formaPico;

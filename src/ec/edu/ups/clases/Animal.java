@@ -14,6 +14,7 @@ package ec.edu.ups.clases;
 public class Animal {
 
     //Clase abuelo Animal que contiene los atributos padre de vertebrado e invertebrado
+    private int codigo;
     private String nombre;
     private int edad;
     private int peso;
@@ -24,14 +25,24 @@ public class Animal {
     }
 
     //Contructor con atributos de la clase Animal
-    public Animal(String nombre, int edad, int peso, String tipoAlimentacion) {
+    public Animal(int codigo,String nombre, int edad, int peso, String tipoAlimentacion) {
+        this.codigo=codigo;
         this.nombre = nombre;
         this.edad = edad;
         this.peso = peso;
         this.tipoAlimentacion = tipoAlimentacion;
     }
-
+    
     //Getter and Setter de la clase Animal
+    public int getCodigo() {
+        return codigo;
+    }
+
+    
+    public void setCodigo(int codigo) {    
+        this.codigo = codigo;
+    }
+
     public String getNombre() {
         return nombre;
     }

@@ -26,13 +26,13 @@ public class Metazoo extends Invertebrado implements Interface {
     }
 
     //Constructor de herencia con la clase Padre Invertebrados
-    public Metazoo(String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(nombre, edad, peso, tipoAlimentacion);
+    public Metazoo(int codigo,String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(codigo, nombre, edad, peso, tipoAlimentacion);
     }
 
     //Constructor de herencia y con los atributos de la clase Metazoo
-    public Metazoo(boolean cuerpoBlando, String simetria, String piel, boolean antenas, boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso, String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(proteccionCorporal, excepcion, movilidad, venenoso, nombre, edad, peso, tipoAlimentacion);
+    public Metazoo(boolean cuerpoBlando, String simetria, String piel, boolean antenas, boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(proteccionCorporal, excepcion, movilidad, venenoso,codigo ,nombre, edad, peso, tipoAlimentacion);
         this.cuerpoBlando = cuerpoBlando;
         this.simetria = simetria;
         this.piel = piel;

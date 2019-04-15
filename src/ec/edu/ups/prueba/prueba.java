@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class prueba {
 
     //Metodos main para la ejecucion del programa
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         //Creacion de una lista de clase Animal
         ArrayList<Animal> lista = new ArrayList<>();
@@ -81,6 +81,6 @@ public class prueba {
             }
         }
 
-    }
+    }*/
 
 }
