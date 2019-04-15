@@ -8,13 +8,27 @@ package ec.edu.ups.clases;
 /**
  *
  * @author tians
+ * @version 8.2
+ * @since 2019
  */
-public abstract class  Invertebrado extends Animal{
+public abstract class Invertebrado extends Animal {
+
+    //Clase padre Vertebrado que contiene los atributos padre de Pez y Ave
     private boolean proteccionCorporal;
     private boolean excepcion;
     private boolean movilidad;
     private boolean venenoso;
 
+    //Constructor vacio
+    public Invertebrado() {
+    }
+
+    //Constructor de herencia con la clase Abuelo Animal
+    public Invertebrado(String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(nombre, edad, peso, tipoAlimentacion);
+    }
+
+    //Constructor de herencia y con los atributos de la clase Padre Invertebrado
     public Invertebrado(boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(nombre, edad, peso, tipoAlimentacion);
         this.proteccionCorporal = proteccionCorporal;
@@ -23,6 +37,7 @@ public abstract class  Invertebrado extends Animal{
         this.venenoso = venenoso;
     }
 
+    //Getter and Setter de la clase Invertebrado
     public boolean isProteccionCorporal() {
         return proteccionCorporal;
     }
@@ -55,12 +70,26 @@ public abstract class  Invertebrado extends Animal{
         this.venenoso = venenoso;
     }
 
+    //Metodo toString de la clase Invertebrado
     @Override
     public String toString() {
         return "Invertebrado{" + "proteccionCorporal=" + proteccionCorporal + ", excepcion=" + excepcion + ", movilidad=" + movilidad + ", venenoso=" + venenoso + '}';
     }
-    
+
+    //Metodos de la clase Invertebrado
+    public void envenenar() {
+
+    }
+
+    public void moverse(boolean moverse) {
+
+    }
+
+    public void producircomid() {
+
+    }
+
+    //Metodos abstracto
     public abstract void multiplicarCelulas();
-    
-    
+
 }

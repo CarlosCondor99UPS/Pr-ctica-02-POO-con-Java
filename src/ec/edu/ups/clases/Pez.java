@@ -10,13 +10,36 @@ import ec.edu.ups.interfaz.Interface;
 /**
  *
  * @author tians
+ * @version 8.2
+ * @since 2019
  */
-public class Pez extends Vertebrado implements Interface{
+public class Pez extends Vertebrado implements Interface {
+
+    //Clase hija Pez que contiene los atributos finales
     private String agua;
     private boolean aleta;
     private boolean mandibula;
     private boolean camuflaje;
 
+    //Constructor vacio
+    public Pez() {
+    }
+
+    //Constructor de herencia con la clase Abuelo Animal
+    public Pez(String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(nombre, edad, peso, tipoAlimentacion);
+    }
+
+    //Constructor de herencia con la clase Padre Vertebrados y atributos de la clase Pez
+    public Pez(String agua, boolean aleta, boolean mandibula, boolean camuflaje, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(nombre, edad, peso, tipoAlimentacion);
+        this.agua = agua;
+        this.aleta = aleta;
+        this.mandibula = mandibula;
+        this.camuflaje = camuflaje;
+    }
+
+    //Constructor de herencia con la clase Padre Invertebrados y atributos de la clase Pez
     public Pez(String agua, boolean aleta, boolean mandibula, boolean camuflaje, int numeroHuesos, String esqueleto, String sangre, String tejido, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(numeroHuesos, esqueleto, sangre, tejido, nombre, edad, peso, tipoAlimentacion);
         this.agua = agua;
@@ -25,8 +48,7 @@ public class Pez extends Vertebrado implements Interface{
         this.camuflaje = camuflaje;
     }
 
-    
-
+    //Getter and Setter de la clase Pez
     public String getAgua() {
         return agua;
     }
@@ -59,42 +81,44 @@ public class Pez extends Vertebrado implements Interface{
         this.camuflaje = camuflaje;
     }
 
+    //Metodo toString de la clase Pez
     @Override
     public String toString() {
-        return "Animal: "+"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()+"\n"
-               +"\tVertebrado: "+"\n\t\t\tEsqueleto: "+super.getEsqueleto() +"\n\t\t\tSangre: "+super.getSangre() +"\n\t\t\tTejido: "+super.getTejido()+"\n\t\t\tHuesos: "+super.getNumeroHuesos()+"\n"
-               +"\t\tPez:"+ "\n\t\t\tAgua: " + agua + "\n\t\t\tAleta: " + aleta + "\n\t\t\tMandibula: " + mandibula + "\n\t\t\tcamuflaje: " + camuflaje +"\n";
-    }
-    
-    public void ponerHuevos () {
-        
-    }
-    
-    public void nadar () {
-        
-    }
-    
-    public void camuflarse () {
-        
+        return "Animal: " + "\n\tNombre: " + super.getNombre() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
+                + "\tVertebrado: " + "\n\t\t\tEsqueleto: " + super.getEsqueleto() + "\n\t\t\tSangre: " + super.getSangre() + "\n\t\t\tTejido: " + super.getTejido() + "\n\t\t\tHuesos: " + super.getNumeroHuesos() + "\n\n"
+                + "\t\t\tPez:" + "\n\t\t\t\tAgua: " + agua + "\n\t\t\t\tAleta: " + aleta + "\n\t\t\t\tMandibula: " + mandibula + "\n\t\t\t\tcamuflaje: " + camuflaje + "\n\n";
     }
 
+    //Metodos de la clase Pez
+    public void ponerHuevos() {
+
+    }
+
+    public void nadar() {
+
+    }
+
+    public void camuflarse() {
+
+    }
+
+    //Metodos abstractos de la clase Interfaz
     @Override
     public void comer() {
-        System.out.println("El pez de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
-                +" esta comiendo");
+        System.out.println("El pez de nombre " + super.getNombre() + ", edad: " + super.getEdad() + ", peso: " + super.getPeso() + ", alimentacion: " + super.getTipoAlimentacion()
+                + " esta comiendo");
     }
-
 
     @Override
     public void dormir() {
-        System.out.println("El pez de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
-                +" esta durmiendo");
+        System.out.println("El pez de nombre " + super.getNombre() + ", edad: " + super.getEdad() + ", peso: " + super.getPeso() + ", alimentacion: " + super.getTipoAlimentacion()
+                + " esta durmiendo");
     }
 
     @Override
     public void crecerColumnaVertebral() {
-        System.out.println("El pez de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
-                +" le crece la columna vertebral");
+        System.out.println("El pez de nombre " + super.getNombre() + ", edad: " + super.getEdad() + ", peso: " + super.getPeso() + ", alimentacion: " + super.getTipoAlimentacion()
+                + " le crece la columna vertebral");
     }
-    
+
 }

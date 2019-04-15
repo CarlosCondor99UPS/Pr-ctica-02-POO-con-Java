@@ -10,13 +10,36 @@ import ec.edu.ups.interfaz.Interface;
 /**
  *
  * @author tians
+ * @version 8.2
+ * @since 2019
  */
-public class Ave extends Vertebrado implements Interface{
+public class Ave extends Vertebrado implements Interface {
+
+    //Clase hija Ave que contiene los atributos finales
     private int numeroAlas;
     private boolean volador;
     private String formaPico;
     private int campoVision;
 
+    //Constructor Vacio
+    public Ave() {
+    }
+
+    //Constructor de herencia con la clase Abuelo Animal
+    public Ave(int numeroHuesos, String esqueleto, String sangre, String tejido, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(numeroHuesos, esqueleto, sangre, tejido, nombre, edad, peso, tipoAlimentacion);
+    }
+
+    //Constructor de herencia con la clase Abuelo Animal y atributos de la clase Ave
+    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(nombre, edad, peso, tipoAlimentacion);
+        this.numeroAlas = numeroAlas;
+        this.volador = volador;
+        this.formaPico = formaPico;
+        this.campoVision = campoVision;
+    }
+
+    //Constructor de herencia con la clase padre Vertebrados y atributos de la clase Ave
     public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, int numeroHuesos, String esqueleto, String sangre, String tejido, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(numeroHuesos, esqueleto, sangre, tejido, nombre, edad, peso, tipoAlimentacion);
         this.numeroAlas = numeroAlas;
@@ -25,8 +48,7 @@ public class Ave extends Vertebrado implements Interface{
         this.campoVision = campoVision;
     }
 
-    
-
+    //Getter and Setter de la clase Ave
     public int getNumeroAlas() {
         return numeroAlas;
     }
@@ -59,43 +81,44 @@ public class Ave extends Vertebrado implements Interface{
         this.campoVision = campoVision;
     }
 
+    //Metodo toString de la clase Ave
     @Override
     public String toString() {
-        return "Animal: "+"\n\tNombre: "+super.getNombre()+"\n\tEdad: "+super.getEdad()+"\n\tPeso: "+super.getPeso() +"\n\tAlimentacion: "+super.getTipoAlimentacion()+"\n"
-               +"\tVertebrado: "+"\n\t\t\tEsqueleto: "+super.getEsqueleto() +"\n\t\t\tSangre: "+super.getSangre() +"\n\t\t\tTejido: "+super.getTejido()+"\n\t\t\tHuesos: "+super.getNumeroHuesos()+"\n"
-               +"\t\tAve:"+ "\n\t\t\tAlas: " + numeroAlas + "\n\t\t\tVolador: " + volador + "\n\t\t\tForma Pico: " + formaPico + "\n\t\t\tCampo Vision(grados): " + campoVision +"\n";
-        
+        return "Animal: " + "\n\tNombre: " + super.getNombre() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
+                + "\tVertebrado: " + "\n\t\t\tEsqueleto: " + super.getEsqueleto() + "\n\t\t\tSangre: " + super.getSangre() + "\n\t\t\tTejido: " + super.getTejido() + "\n\t\t\tHuesos: " + super.getNumeroHuesos() + "\n\n"
+                + "\t\t\tAve:" + "\n\t\t\t\tAlas: " + numeroAlas + "\n\t\t\t\tVolador: " + volador + "\n\t\t\t\tForma Pico: " + formaPico + "\n\t\t\t\tCampo Vision(grados): " + campoVision + "\n\n";
+
     }
 
-        
-    public void cambiarPlumas () {
-        
-    }
-    
-    public void volar () {
-        
-    }
-    
-    public void picotear () {
-        
+    //Metodos de la clase Ave  
+    public void cambiarPlumas() {
+
     }
 
+    public void volar() {
+
+    }
+
+    public void picotear() {
+
+    }
+
+    //Metodos abstractos de la clase Interfaz
     @Override
     public void comer() {
-        System.out.println("El ave de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
-                +" esta comiendo");
+        System.out.println("El ave de nombre " + super.getNombre() + ", edad: " + super.getEdad() + ", peso: " + super.getPeso() + ", alimentacion: " + super.getTipoAlimentacion()
+                + " esta comiendo");
     }
-
 
     @Override
     public void dormir() {
-        System.out.println("El ave de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
-                +" esta durmiendo");
+        System.out.println("El ave de nombre " + super.getNombre() + ", edad: " + super.getEdad() + ", peso: " + super.getPeso() + ", alimentacion: " + super.getTipoAlimentacion()
+                + " esta durmiendo");
     }
 
     @Override
     public void crecerColumnaVertebral() {
-        System.out.println("El ave de nombre "+super.getNombre()+", edad: "+super.getEdad()+", peso: "+super.getPeso() +", alimentacion: "+super.getTipoAlimentacion()
-                +" le crece la columna vertebral");
+        System.out.println("El ave de nombre " + super.getNombre() + ", edad: " + super.getEdad() + ", peso: " + super.getPeso() + ", alimentacion: " + super.getTipoAlimentacion()
+                + " le crece la columna vertebral");
     }
 }

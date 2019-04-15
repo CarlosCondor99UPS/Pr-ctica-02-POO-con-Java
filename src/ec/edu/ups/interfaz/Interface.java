@@ -8,8 +8,13 @@ package ec.edu.ups.interfaz;
 /**
  *
  * @author tians
+ * @version 8.2
+ * @since 2019
  */
 public interface Interface {
+
+    //Metodos abstractos de la clase Interfaz
     public abstract void comer();
+
     public abstract void dormir();
 }

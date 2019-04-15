@@ -8,13 +8,22 @@ package ec.edu.ups.clases;
 /**
  *
  * @author tians
+ * @version 8.2
+ * @since 2019
  */
 public class Animal {
+
+    //Clase abuelo Animal que contiene los atributos padre de vertebrado e invertebrado
     private String nombre;
     private int edad;
     private int peso;
     private String tipoAlimentacion;
 
+    //Constructur Vacio
+    public Animal() {
+    }
+
+    //Contructor con atributos de la clase Animal
     public Animal(String nombre, int edad, int peso, String tipoAlimentacion) {
         this.nombre = nombre;
         this.edad = edad;
@@ -22,6 +31,7 @@ public class Animal {
         this.tipoAlimentacion = tipoAlimentacion;
     }
 
+    //Getter and Setter de la clase Animal
     public String getNombre() {
         return nombre;
     }
@@ -54,11 +64,10 @@ public class Animal {
         this.tipoAlimentacion = tipoAlimentacion;
     }
 
+    //Metodo toString de la clase Animal
     @Override
     public String toString() {
         return "Animal{" + "nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + ", tipoAlimentacion=" + tipoAlimentacion + '}';
     }
-    
-    
-    
+
 }

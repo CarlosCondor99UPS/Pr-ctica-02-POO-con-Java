@@ -8,13 +8,27 @@ package ec.edu.ups.clases;
 /**
  *
  * @author tians
+ * @version 8.2
+ * @since 2019
  */
-public abstract class Vertebrado extends Animal{
+public abstract class Vertebrado extends Animal {
+
+    //Clase padre Invertebrado que contiene los atributos padre de Metazoo y Artropodo
     public int numeroHuesos;
     public String esqueleto;
     public String sangre;
     public String tejido;
 
+    //Constructor vacio
+    public Vertebrado() {
+    }
+
+    //Constructor de herencia con la clase Abuelo Animal
+    public Vertebrado(String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(nombre, edad, peso, tipoAlimentacion);
+    }
+
+    //Constructor de herencia y con los atributos de la clase Padre Vertebrado
     public Vertebrado(int numeroHuesos, String esqueleto, String sangre, String tejido, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(nombre, edad, peso, tipoAlimentacion);
         this.numeroHuesos = numeroHuesos;
@@ -23,7 +37,7 @@ public abstract class Vertebrado extends Animal{
         this.tejido = tejido;
     }
 
-    
+    //Getter and Setter de la clase Vertebrado
     public int getNumeroHuesos() {
         return numeroHuesos;
     }
@@ -56,11 +70,26 @@ public abstract class Vertebrado extends Animal{
         this.tejido = tejido;
     }
 
+    //Metodo toString de la clase Vertebrado
     @Override
     public String toString() {
         return "Vertebrado{" + "numeroHuesos=" + numeroHuesos + ", esqueleto=" + esqueleto + ", sangre=" + sangre + ", tejido=" + tejido + '}';
     }
-    
-    public abstract void crecerColumnaVertebral ();
-    
+
+    //Metodos de la clase Vertebrado
+    public void romperHueso() {
+
+    }
+
+    public void repararHueso() {
+
+    }
+
+    public void crecerHueso() {
+
+    }
+
+    //Metodos abstracto
+    public abstract void crecerColumnaVertebral();
+
 }
