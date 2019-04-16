@@ -23,7 +23,7 @@ public class main {
 
     static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ControladorPez controladorPez = new ControladorPez();
         ControladorAve controladorAve = new ControladorAve();
         ControladorArtropodo controladorArtro = new ControladorArtropodo();
@@ -337,5 +337,5 @@ public class main {
         System.out.println("** Ingrese el veneno(true/false)");
         invertebrado[3] = sc.nextBoolean();
         return invertebrado;
-    }
+    }*/
 }
