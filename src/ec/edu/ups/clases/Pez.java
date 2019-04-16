@@ -13,7 +13,7 @@ import ec.edu.ups.interfaz.Interface;
  * @version 8.2
  * @since 2019
  */
-public class Pez extends Vertebrado implements Interface {
+public final class Pez extends Vertebrado implements Interface {
 
     //Clase hija Pez que contiene los atributos finales
     private String agua;

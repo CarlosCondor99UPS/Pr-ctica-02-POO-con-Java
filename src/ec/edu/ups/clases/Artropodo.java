@@ -13,7 +13,7 @@ import ec.edu.ups.interfaz.Interface;
  * @version 8.2
  * @since 2019
  */
-public class Artropodo extends Invertebrado implements Interface {
+public final class Artropodo extends Invertebrado implements Interface {
     //Clase hija Artropodo que contiene los atributos finales
     private String forma;
     private boolean apendice;

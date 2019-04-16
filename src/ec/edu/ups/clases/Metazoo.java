@@ -13,7 +13,7 @@ import ec.edu.ups.interfaz.Interface;
  * @version 8.2
  * @since 2019
  */
-public class Metazoo extends Invertebrado implements Interface {
+public final class Metazoo extends Invertebrado implements Interface {
 
     //Clase hija Metazoo que contiene los atributos finales
     private boolean cuerpoBlando;

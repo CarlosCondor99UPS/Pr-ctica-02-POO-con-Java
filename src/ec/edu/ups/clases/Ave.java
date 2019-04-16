@@ -13,7 +13,7 @@ import ec.edu.ups.interfaz.Interface;
  * @version 8.2
  * @since 2019
  */
-public class Ave extends Vertebrado implements Interface {
+public final class Ave extends Vertebrado implements Interface {
 
     //Clase hija Ave que contiene los atributos finales
     private int numeroAlas;
