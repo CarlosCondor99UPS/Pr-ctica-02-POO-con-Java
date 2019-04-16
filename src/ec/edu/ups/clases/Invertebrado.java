@@ -85,7 +85,7 @@ public abstract class Invertebrado extends Animal {
 
     }
 
-    public void producircomid() {
+    public void producircomida() {
 
     }
 

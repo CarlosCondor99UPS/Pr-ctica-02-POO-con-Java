@@ -5,7 +5,7 @@
  */
 package ec.edu.ups.controladores;
 
-import ec.edu.ups.clases.Pez;
+import ec.edu.ups.clases.Ave;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,20 +13,19 @@ import java.util.List;
  *
  * @author tians
  */
-public class ControladorPez {
-
-    private List<Pez> peces= new ArrayList<>();;
+public class ControladorAve {
+    private List<Ave> aves= new ArrayList<>();;
 
     public void ControladorPez() {
-        peces = new ArrayList<>();
+        aves = new ArrayList<>();
     }
 
-    public void guardar(Pez ojeto) {
-        peces.add(ojeto);
+    public void guardar(Ave ojeto) {
+        aves.add(ojeto);
     }
     
-    public Pez read(int codigo){
-        for (Pez objeto : this.peces){
+    public Ave read(int codigo){
+        for (Ave objeto : this.aves){
             if (objeto.getCodigo()==codigo){
                 return objeto;
             }
@@ -34,24 +33,23 @@ public class ControladorPez {
         return null;
     }
     
-    public void update (Pez objeto){
-        for (int i=0;i<peces.size();i++){
-            Pez elemento=peces.get(i);
+    public void update (Ave objeto){
+        for (int i=0;i<aves.size();i++){
+            Ave elemento=aves.get(i);
             if (elemento.getCodigo()==objeto.getCodigo()){
-                peces.set(i, objeto);
+                aves.set(i, objeto);
                 break;
             }
         }
     }
     
-    public void delete(Pez objeto){
-        for (int i=0;i<peces.size();i++){
-            Pez elemento=peces.get(i);
+    public void delete(Ave objeto){
+        for (int i=0;i<aves.size();i++){
+            Ave elemento=aves.get(i);
             if (elemento.getCodigo()==objeto.getCodigo()){
-                peces.remove(i);
+                aves.remove(i);
                 break;
             }
         }
     }
-
 }

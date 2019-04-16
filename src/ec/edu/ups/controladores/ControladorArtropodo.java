@@ -5,7 +5,7 @@
  */
 package ec.edu.ups.controladores;
 
-import ec.edu.ups.clases.Pez;
+import ec.edu.ups.clases.Artropodo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,20 +13,19 @@ import java.util.List;
  *
  * @author tians
  */
-public class ControladorPez {
-
-    private List<Pez> peces= new ArrayList<>();;
+public class ControladorArtropodo {
+    private List<Artropodo> artropodos= new ArrayList<>();;
 
     public void ControladorPez() {
-        peces = new ArrayList<>();
+        artropodos = new ArrayList<>();
     }
 
-    public void guardar(Pez ojeto) {
-        peces.add(ojeto);
+    public void guardar(Artropodo ojeto) {
+        artropodos.add(ojeto);
     }
     
-    public Pez read(int codigo){
-        for (Pez objeto : this.peces){
+    public Artropodo read(int codigo){
+        for (Artropodo objeto : this.artropodos){
             if (objeto.getCodigo()==codigo){
                 return objeto;
             }
@@ -34,24 +33,23 @@ public class ControladorPez {
         return null;
     }
     
-    public void update (Pez objeto){
-        for (int i=0;i<peces.size();i++){
-            Pez elemento=peces.get(i);
+    public void update (Artropodo objeto){
+        for (int i=0;i<artropodos.size();i++){
+            Artropodo elemento=artropodos.get(i);
             if (elemento.getCodigo()==objeto.getCodigo()){
-                peces.set(i, objeto);
+                artropodos.set(i, objeto);
                 break;
             }
         }
     }
     
-    public void delete(Pez objeto){
-        for (int i=0;i<peces.size();i++){
-            Pez elemento=peces.get(i);
+    public void delete(Artropodo objeto){
+        for (int i=0;i<artropodos.size();i++){
+            Artropodo elemento=artropodos.get(i);
             if (elemento.getCodigo()==objeto.getCodigo()){
-                peces.remove(i);
+                artropodos.remove(i);
                 break;
             }
         }
     }
-
 }

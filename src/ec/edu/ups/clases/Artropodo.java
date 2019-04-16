@@ -79,7 +79,7 @@ public class Artropodo extends Invertebrado implements Interface {
     //Metodo toString de la clase Artropodo
     @Override
     public String toString() {
-        return "Animal: " + "\n\tNombre: " + super.getNombre() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
+        return "Animal: " + "\n\tNombre: " + super.getNombre() + "\n\tCodigo: " + super.getCodigo() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
                 + "\tInvertebrado: " + "\n\t\t\tExcepcion: " + super.isExcepcion() + "\n\t\t\tMovilidad: " + super.isMovilidad() + "\n\t\t\tProteccion Corporal: " + super.isProteccionCorporal() + "\n\t\t\tVenenoso: " + super.isVenenoso() + "\n\n"
                 + "\t\t\tArtropodo:" + "\n\t\t\t\t\tForma: " + forma + "\n\t\t\t\t\tApendice: " + apendice + "\n\t\t\t\t\tCabeza: " + cabeza + "\n\t\t\t\t\tPoros: " + poro + "\n\n";
     }

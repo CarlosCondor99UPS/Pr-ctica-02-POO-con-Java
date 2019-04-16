@@ -5,7 +5,7 @@
  */
 package ec.edu.ups.controladores;
 
-import ec.edu.ups.clases.Pez;
+import ec.edu.ups.clases.Metazoo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,20 +13,19 @@ import java.util.List;
  *
  * @author tians
  */
-public class ControladorPez {
-
-    private List<Pez> peces= new ArrayList<>();;
+public class ControladorMetazoo {
+    private List<Metazoo> metazoos= new ArrayList<>();;
 
     public void ControladorPez() {
-        peces = new ArrayList<>();
+        metazoos = new ArrayList<>();
     }
 
-    public void guardar(Pez ojeto) {
-        peces.add(ojeto);
+    public void guardar(Metazoo ojeto) {
+        metazoos.add(ojeto);
     }
     
-    public Pez read(int codigo){
-        for (Pez objeto : this.peces){
+    public Metazoo read(int codigo){
+        for (Metazoo objeto : this.metazoos){
             if (objeto.getCodigo()==codigo){
                 return objeto;
             }
@@ -34,24 +33,23 @@ public class ControladorPez {
         return null;
     }
     
-    public void update (Pez objeto){
-        for (int i=0;i<peces.size();i++){
-            Pez elemento=peces.get(i);
+    public void update (Metazoo objeto){
+        for (int i=0;i<metazoos.size();i++){
+            Metazoo elemento=metazoos.get(i);
             if (elemento.getCodigo()==objeto.getCodigo()){
-                peces.set(i, objeto);
+                metazoos.set(i, objeto);
                 break;
             }
         }
     }
     
-    public void delete(Pez objeto){
-        for (int i=0;i<peces.size();i++){
-            Pez elemento=peces.get(i);
+    public void delete(Metazoo objeto){
+        for (int i=0;i<metazoos.size();i++){
+            Metazoo elemento=metazoos.get(i);
             if (elemento.getCodigo()==objeto.getCodigo()){
-                peces.remove(i);
+                metazoos.remove(i);
                 break;
             }
         }
     }
-
 }

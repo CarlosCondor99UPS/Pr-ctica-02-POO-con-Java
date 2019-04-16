@@ -40,7 +40,7 @@ public class Ave extends Vertebrado implements Interface {
     }
 
     //Constructor de herencia con la clase padre Vertebrados y atributos de la clase Ave
-    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, int numeroHuesos, String esqueleto,int codigo ,String sangre, String tejido, String nombre, int edad, int peso, String tipoAlimentacion) {
+    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, int numeroHuesos, String esqueleto ,String sangre, String tejido,int codigo  ,String nombre, int edad, int peso, String tipoAlimentacion) {
         super(numeroHuesos, esqueleto, sangre, tejido,codigo ,nombre, edad, peso, tipoAlimentacion);
         this.numeroAlas = numeroAlas;
         this.volador = volador;
@@ -84,7 +84,7 @@ public class Ave extends Vertebrado implements Interface {
     //Metodo toString de la clase Ave
     @Override
     public String toString() {
-        return "Animal: " + "\n\tNombre: " + super.getNombre() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
+        return "Animal: " + "\n\tNombre: " + super.getNombre() +"\n\tCodigo: " + super.getCodigo() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
                 + "\tVertebrado: " + "\n\t\t\tEsqueleto: " + super.getEsqueleto() + "\n\t\t\tSangre: " + super.getSangre() + "\n\t\t\tTejido: " + super.getTejido() + "\n\t\t\tHuesos: " + super.getNumeroHuesos() + "\n\n"
                 + "\t\t\tAve:" + "\n\t\t\t\tAlas: " + numeroAlas + "\n\t\t\t\tVolador: " + volador + "\n\t\t\t\tForma Pico: " + formaPico + "\n\t\t\t\tCampo Vision(grados): " + campoVision + "\n\n";
 

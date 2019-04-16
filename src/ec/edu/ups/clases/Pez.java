@@ -84,7 +84,7 @@ public class Pez extends Vertebrado implements Interface {
     //Metodo toString de la clase Pez
     @Override
     public String toString() {
-        return "Animal: " + "\n\tNombre: " + super.getNombre() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
+        return "Animal: " + "\n\tNombre: " + super.getNombre() +"\n\tCodigo: " + super.getCodigo() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
                 + "\tVertebrado: " + "\n\t\t\tEsqueleto: " + super.getEsqueleto() + "\n\t\t\tSangre: " + super.getSangre() + "\n\t\t\tTejido: " + super.getTejido() + "\n\t\t\tHuesos: " + super.getNumeroHuesos() + "\n\n"
                 + "\t\t\tPez:" + "\n\t\t\t\tAgua: " + agua + "\n\t\t\t\tAleta: " + aleta + "\n\t\t\t\tMandibula: " + mandibula + "\n\t\t\t\tcamuflaje: " + camuflaje + "\n\n";
     }
