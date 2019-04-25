@@ -1,55 +1,61 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ec.edu.ups.controladores;
 
 import ec.edu.ups.clases.Ave;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
-/**
- *
- * @author tians
- */
 public class ControladorAve {
-    private List<Ave> aves= new ArrayList<>();;
 
-    public void ControladorPez() {
-        aves = new ArrayList<>();
+    private SortedSet<Ave> listaOrdenada;
+    private int codigo;
+
+    public ControladorAve() {
+    
+        listaOrdenada = new TreeSet<>();
+        codigo = 1;
+    
     }
 
-    public void guardar(Ave ojeto) {
-        aves.add(ojeto);
+    public void guardar(Ave objeto){
+        codigo ++;
+        objeto.setCodigo(codigo);
+        listaOrdenada.add(objeto);
     }
     
     public Ave read(int codigo){
-        for (Ave objeto : this.aves){
-            if (objeto.getCodigo()==codigo){
-                return objeto;
+        for (Ave Ave : listaOrdenada) {
+            if(Ave.getCodigo() == codigo){
+                return Ave;
             }
         }
         return null;
     }
     
-    public void update (Ave objeto){
-        for (int i=0;i<aves.size();i++){
-            Ave elemento=aves.get(i);
-            if (elemento.getCodigo()==objeto.getCodigo()){
-                aves.set(i, objeto);
-                break;
-            }
+    public void update(Ave objeto){
+        if(listaOrdenada.contains(objeto)){
+            listaOrdenada.remove(objeto);
+            listaOrdenada.add(objeto);
         }
     }
     
-    public void delete(Ave objeto){
-        for (int i=0;i<aves.size();i++){
-            Ave elemento=aves.get(i);
-            if (elemento.getCodigo()==objeto.getCodigo()){
-                aves.remove(i);
-                break;
+    public void delete(int codigo){
+        for (Ave Ave : listaOrdenada) {
+            if(Ave.getCodigo() == codigo){
+                listaOrdenada.remove(Ave);
+            break;
             }
+            
         }
     }
+
+    public void imprimir(){
+        System.out.println("Lista Ordenada por Nombre");
+        for (Ave Ave : listaOrdenada) {
+            System.out.println(Ave.getNombre());
+            
+        }
+    }
+    
 }

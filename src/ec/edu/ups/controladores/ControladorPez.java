@@ -6,8 +6,8 @@
 package ec.edu.ups.controladores;
 
 import ec.edu.ups.clases.Pez;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  *
@@ -15,30 +15,30 @@ import java.util.List;
  */
 public class ControladorPez {
 
-    private List<Pez> peces= new ArrayList<>();;
+    private Map<Integer, Pez> peces;
+    private int cont;
 
     public void ControladorPez() {
-        peces = new ArrayList<>();
+        peces = new TreeMap();
+        cont=0;
     }
 
-    public void guardar(Pez ojeto) {
-        peces.add(ojeto);
+    public void guardar(Pez objeto) {
+        cont++;
+        objeto.setCodigo(cont);
+        peces.put(cont, objeto);
     }
     
     public Pez read(int codigo){
-        for (Pez objeto : this.peces){
-            if (objeto.getCodigo()==codigo){
-                return objeto;
-            }
-        }
-        return null;
+        return peces.get(codigo);
     }
     
     public void update (Pez objeto){
         for (int i=0;i<peces.size();i++){
             Pez elemento=peces.get(i);
             if (elemento.getCodigo()==objeto.getCodigo()){
-                peces.set(i, objeto);
+                peces.remove(i);
+                peces.put(objeto.getCodigo(),objeto);
                 break;
             }
         }

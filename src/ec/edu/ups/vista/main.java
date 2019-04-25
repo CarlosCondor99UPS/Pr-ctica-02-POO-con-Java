@@ -23,7 +23,7 @@ public class main {
 
     static Scanner sc = new Scanner(System.in);
 
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         ControladorPez controladorPez = new ControladorPez();
         ControladorAve controladorAve = new ControladorAve();
         ControladorArtropodo controladorArtro = new ControladorArtropodo();
@@ -155,7 +155,7 @@ public class main {
                             System.out.println("*** Eliminar Ave ***");
                             System.out.println("** Ingrese el codigo");
                             codigo = sc.nextInt();
-                            controladorAve.delete(controladorAve.read(codigo));
+                            controladorAve.delete();
                             break;
                     }
                 } while (op3 != 5);
@@ -240,7 +240,7 @@ public class main {
                             boolean antenas = sc.nextBoolean();
                             System.out.println("** Ingrese la piel");
                             String piel = sc.next();
-                            Metazoo objeto=new Metazoo(cuerpoBlando, simetria, piel, antenas, invertebrado[0], invertebrado[1], invertebrado[2], invertebrado[3], animal2[0], animal1[0], animal2[1], animal2[2], animal1[1]);
+                            Metazoo objeto = new Metazoo(cuerpoBlando, simetria, piel, antenas, invertebrado[0], invertebrado[1], invertebrado[2], invertebrado[3], animal2[0], animal1[0], animal2[1], animal2[2], animal1[1]);
                             controladorMetazoo.guardar(objeto);
                             break;
                         case 2:
@@ -337,5 +337,5 @@ public class main {
         System.out.println("** Ingrese el veneno(true/false)");
         invertebrado[3] = sc.nextBoolean();
         return invertebrado;
-    }*/
+    }
 }

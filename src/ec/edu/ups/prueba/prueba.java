@@ -11,6 +11,8 @@ import ec.edu.ups.clases.Ave;
 import ec.edu.ups.clases.Metazoo;
 import ec.edu.ups.clases.Pez;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -20,8 +22,33 @@ import java.util.ArrayList;
  */
 public class prueba {
 
-    //Metodos main para la ejecucion del programa
     public static void main(String[] args) {
+
+        Ave anonimo = new Ave(4, true, "Curvado", 80, 35, "Interno", "Caliente",
+                "Vertebras", 1, "Condor", 5, 80, "Carnivoro");
+        Ave anonimo2 = new Ave(4, true, "Curvado", 80, 35, "Interno", "Caliente",
+                "Vertebras", 2, "Condor", 5, 80, "Carnivoro");
+        Pez anonimo3 = new Pez("Salada", true, true, false, 150, "Interno", "Fria", "Vertebrados y cartilagos",2,
+                "Pez espada", 5, 250, "Carnivoro");
+        if (anonimo.equals(anonimo2)) {
+            System.out.println("Son iguales :)");
+        }else {
+            System.out.println("No son iguales :(");
+        }
+        Set<Ave> lista= new HashSet<>();
+        lista.add(anonimo);
+        lista.add(anonimo2);
+        
+        for (Ave ave : lista) {
+            System.out.println("Ave: "+ave.toString()); 
+        }
+        if (lista.contains(anonimo)){
+            System.out.println("Si existe");
+        }
+    }
+
+    //Metodos main para la ejecucion del programa
+    /*public static void main(String[] args) {
 
         //Creacion de una lista de clase Animal
         ArrayList<Animal> lista = new ArrayList<>();
@@ -81,6 +108,5 @@ public class prueba {
             }
         }
 
-    }
-
+    }*/
 }
